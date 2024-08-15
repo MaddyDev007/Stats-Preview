@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+    --Verydarkbluemainbackground: hsl(233, 47%, 7%);
+--Dark-desaturated-bluecardbackground: hsl(244, 38%, 16%);
+--Softvioletaccent: hsl(277, 64%, 61%);
+--Whitemainheadingstats: hsl(0, 0%, 100%);
+--Slightlytransparentwhitemainparagraph: hsla(0, 0%, 100%, 0.75);
+--Slightlytransparentwhitestatheadings: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 15px;
+    font-family: "Inter", sans-serif; 
+}
+img{
+    position: relative;
+}
+ .overlay{
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+ }
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Verydarkbluemainbackground);
+}
+.main{
+    display: flex;
+    max-width: 1100px;
+    color: var(--Whitemainheadingstats);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    padding: 74px 84px 40px  84px;
+    background-color: var(--Dark-desaturated-bluecardbackground);
+}
+.statics{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 70px;
+}
+h1{
+    padding-bottom: 30px;
+    font-size: 35px;
+}
+p{
+    color: var(--Slightlytransparentwhitemainparagraph);
+    line-height: 25px;
+    font-weight: 400;
+}
+.statics p{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 12px;
+}
+h2{
+    color: var(--Whitemainheadingstats);
+}
+span{
+    color: var(--Softvioletaccent);
+}
+.color{
+    position: absolute;
+    background-color: hsla(278, 86%, 26%, 0.619);
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:900px)
+{
+    h1{
+        font-size: 25px;
+    }
+    .container{
+        padding: 30px;
+    }
+    .main{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    img{
+        width: 100%;
+    }
+    
+    .text{
+        padding: 30px;
+    }
+    p{
+        text-align: center;
+        line-height:17px;
+    }
+    .statics{
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 20px;
+        row-gap: 20px;
+    }
+    h1{
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+}
